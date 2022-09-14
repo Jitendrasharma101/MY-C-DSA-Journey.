@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main(){
+    string s;
+    cout<<"Enter the string   ";
+    getline(cin,s);
+    int max=0;
+    char result;
+    int i;
+    int count[26]={0};
+    for(i=0;i<s.length();i++){
+        count[s[i]-'a']++;
+    }
+    for(i=0;i<26;i++){
+        if(count[i]>max){
+            max=count[i];
+            result=('a'+i);
+        }
+    }cout<<result<<endl;
+    return 0;
+
+}
