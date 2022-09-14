@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int factorial=1,number;
+    cin>>number;
+    if(number==0||number==1){
+        cout<<1;
+    }else if(number>=2){
+    while(number>=2){
+        factorial=factorial*(number);
+        number--;
+    } cout<<factorial;
+    }
+        else{
+            cout<<"Error";
+        }
+    
