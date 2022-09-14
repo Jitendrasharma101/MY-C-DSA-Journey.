@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N,Num,sum,l;
+    cin>>N;
+    if(N%2==0){
+        l=N;
+        Num=N/2;
+    }else
+    {   l=N-1;
+        Num=(N-1)/2;
+    }
+    sum=(Num)*(2+l)/2;
+    cout<<sum;
+
+    return 0;
+}
