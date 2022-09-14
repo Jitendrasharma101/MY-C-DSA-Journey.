@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int prin,time,si;
+    float rate;
+    cin>>prin>>rate>>time;
+    si=prin*rate*time/100;
+    cout<<si<<endl;
+    
+   
+
+    return 0;
+}
