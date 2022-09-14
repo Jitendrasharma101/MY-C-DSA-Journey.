@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int S,E,W,i;
+  float celcius;
+   cin>>S>>E>>W;
+    for(i=S;i<=E;i+=W)
+    {   celcius=int((0.5555556)*(i-32));
+        cout<<i<<"\t"<<celcius<<endl;
+    }
+    return 0;
+}
