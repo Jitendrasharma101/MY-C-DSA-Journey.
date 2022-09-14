@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    long x,n;
+    cin>>x>>n;
+    int  i;
+    unsigned long long power=1;
+    for(i=0;i<n;i++){
+        power=power*x;
+    }
+     cout<<power;   
+
+    return 0;
+}
