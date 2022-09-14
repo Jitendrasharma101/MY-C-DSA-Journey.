@@ -1,0 +1,22 @@
+int  fibonacciNumber(int n){
+  
+    if(n==1|| n==2){
+        return 1;
+    }
+    else{
+        const unsigned int  M = 1000000007;
+        unsigned int  num1=1,num2=1;
+        int i;
+        
+        unsigned int fibonacci;
+        for(i=3;i<=n;i++){
+            fibonacci=num1+num2;
+            num1=num2;
+            num2=fibonacci%M;
+           
+        }
+        return fibonacci%M;
+    }
+           
+    
+}
