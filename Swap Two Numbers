@@ -1,0 +1,7 @@
+#include <utility>
+
+pair < int, int > swap(pair < int, int > swapValues) {
+    
+    swap(swapValues.first,swapValues.second);
+    return swapValues;
+}
