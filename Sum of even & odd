@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number,rem,evensum=0,oddsum=0;
+    cin>>number;
+    while(number>0){
+        rem=number%10;
+        if(rem%2==0){
+            evensum=evensum+rem;
+        }else{
+            oddsum=oddsum+rem;
+        }number=number/10;
+    }
+    cout<<evensum<<" "<<oddsum;
+     
+    return 0;
+}
