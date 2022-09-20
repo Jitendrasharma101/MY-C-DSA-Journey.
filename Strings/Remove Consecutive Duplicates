@@ -1,0 +1,27 @@
+#include <bits/stdc++.h> 
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+
+string removeConsecutiveDuplicates(string input)
+{
+    int i;
+  int  n=input.length();
+    string result;
+    for(i=0;i<n;i++){
+        if(input[i]!=input[i+1]){
+            char s=input[i];
+            result.push_back(s);
+        }
+        
+    }return result;
+}
+
+int main()
+{
+    string str;
+    cin >> str;
+    string ans = removeConsecutiveDuplicates(str);
+    cout << ans << endl;
+}
