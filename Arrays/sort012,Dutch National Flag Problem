@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+void sort012(int arr[], int n) {
+    int low=0,mid=0,hi=n-1;
+    int i;
+    for(i=0;i<n;i++){
+        if(arr[mid]==0){
+            int var1=arr[low];
+            arr[low]=arr[mid];
+            arr[mid]=var1;
+            low=low+1;
+            mid=mid+1;
+            }else if(arr[mid]==1){
+            mid=mid+1;
+        } else if(arr[mid]==2){
+            int var2=arr[mid];
+            arr[mid]=arr[hi];
+            arr[hi]=var2;
+            hi=hi-1;
+        }
+        else{
+            cout<<"Error";
+        }
+    }
+
+}
+
+int main() {
+    int t;
+    cin >> t;
+
+    while (t > 0) {
+        int n;
+        cin >> n;
+        int arr[n];
+        for (int i = 0; i < n; i++) {
+            cin >> arr[i];
+        }
+        sort012(arr, n);
+        for (int i = 0; i < n; i++) {
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+        t--;
+    }
+    return 0;
+}
