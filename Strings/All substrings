@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+void printSubstrings(string input) {
+   int i,j,k;
+    for(k=0;k<input.size();k++){
+    for(i=0;i<input.size();i++){
+       
+        for(j=k;j<=i;j++){
+           
+            cout<<input[j];
+        }
+        cout<<endl; 
+    }
+    } 
+}
+
+int main() {
+    string input;
+    getline(cin, input);
+    printSubstrings(input);
+    return 0;
+}
