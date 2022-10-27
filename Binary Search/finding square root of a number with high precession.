@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+int sqrtN(int n){
+    int start=0;
+    int end=n;
+    long long int ans =-1;
+    long long int mid=(start)+(end-start)/2;
+    while(start<end){
+        long long int  square= mid*mid;
+        if(square==n){
+            return mid;
+        }
+        if(square<n){
+             ans=mid;
+             start=mid+1;
+
+        }else{
+            end=mid-1;
+        }
+        mid=start+(end-start)/2;
+    } return ans;
+}
+double moreprecesion(int n,int precesion,int tempsol){
+    double factor =1;
+    double ans=tempsol;
+    for(int i=0;i<precesion;i++){
+        factor=factor/10;
+        for(double j=ans;j*j<n;j=j+factor){
+            ans=j;
+        }
+    }return ans;
+  
+}
+int main(){
+    int N;
+    int precesion;
+    cout<<"Enter the Number:  "<<endl;
+    cin>>N;
+    cout<<"Enter the degree of precisoin:  "<<endl;
+    cin>>precesion;
+    int tempsol=sqrtN(N);
+    cout<<"The more precise answer is : "<<moreprecesion(N,precesion,tempsol)<<endl;
+    return 0;   
+}
